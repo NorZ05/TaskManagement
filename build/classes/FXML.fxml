@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="596.0" prefWidth="946.0" style="-fx-background-radius: 1em;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLController">
+   <children>
+      <BorderPane prefHeight="596.0" prefWidth="982.0" style="-fx-background-color: #474C5F; -fx-background-radius: 1em;">
+         <left>
+            <Pane prefHeight="586.0" prefWidth="484.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField layoutX="98.0" layoutY="150.0" prefHeight="26.0" prefWidth="325.0" style="-fx-background-color: #989ADD; -fx-background-radius: 1em;">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding></TextField>
+                  <GridPane alignment="CENTER" layoutX="96.0" layoutY="189.0" prefHeight="49.0" prefWidth="329.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="72.0" styleClass="button3" stylesheets="@css/fullpackstyling.css" text="Search" GridPane.columnIndex="2" />
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="72.0" styleClass="button3" stylesheets="@css/fullpackstyling.css" text="Add" />
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="72.0" styleClass="button3" stylesheets="@css/fullpackstyling.css" text="Complete" GridPane.columnIndex="3" />
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="72.0" styleClass="button3" stylesheets="@css/fullpackstyling.css" text="Delete" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+                  <Label fx:id="lblName" layoutX="105.0" layoutY="65.0" text="TechMach Innovations, LLC." textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblGreeting" layoutX="105.0" layoutY="92.0" text="Welome Back!" textFill="#9c9c9c">
+                     <font>
+                        <Font name="Arial Black" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnEX" layoutX="14.0" layoutY="14.0" minHeight="15.0" minWidth="37.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="37.0" style="-fx-background-color: #ff0404; -fx-background-radius: 2em;" text="--" />
+               </children>
+            </Pane>
+         </left>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <center>
+            <BorderPane prefHeight="586.0" prefWidth="490.0" style="-fx-background-color: #FBFCFC; -fx-background-radius: 1em;" BorderPane.alignment="CENTER">
+               <top>
+                  <Pane prefHeight="127.0" prefWidth="469.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="lblGreeting1" layoutX="14.0" layoutY="59.0" text="PROJECTS/TASKS">
+                           <font>
+                              <Font name="Arial Black" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </top>
+               <bottom>
+                  <BorderPane BorderPane.alignment="CENTER">
+                     <top>
+                        <Pane prefHeight="38.0" prefWidth="469.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="lblGreeting211" layoutX="29.0" layoutY="14.0" text="Upcoming">
+                                 <font>
+                                    <Font name="Arial Black" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </top>
+                     <center>
+                        <ScrollPane prefHeight="176.0" prefWidth="469.0" style="-fx-background-radius: 1em; -fx-background-color: #FBFCFC;" BorderPane.alignment="CENTER">
+                           <content>
+                              <VBox fx:id="vTaskItemsupcoming" alignment="TOP_CENTER" prefHeight="178.0" prefWidth="456.0" style="-fx-background-color: #FBFCFC;" />
+                           </content>
+                        </ScrollPane>
+                     </center>
+                  </BorderPane>
+               </bottom>
+               <center>
+                  <BorderPane BorderPane.alignment="CENTER">
+                     <center>
+                        <BorderPane>
+                           <center>
+                              <ScrollPane prefHeight="198.0" prefWidth="469.0" style="-fx-background-color: #FBFCFC; -fx-background-radius: 1em;">
+                                 <content>
+                                    <VBox fx:id="vTaskItems" alignment="TOP_CENTER" prefHeight="184.0" prefWidth="456.0" style="-fx-background-color: #FBFCFC;">
+                                       <padding>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </center>
+                           <top>
+                              <Label fx:id="lblGreeting21" text="Today" BorderPane.alignment="CENTER_LEFT">
+                                 <font>
+                                    <Font name="Arial Black" size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="10.0" left="30.0" top="10.0" />
+                                 </padding>
+                              </Label>
+                           </top>
+                        </BorderPane>
+                     </center>
+                  </BorderPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
